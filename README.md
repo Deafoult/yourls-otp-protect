@@ -47,6 +47,13 @@ The OTPs are generated and verified using the `SimpleAuthenticator` class, which
 
 The secrets are stored in the YOURLS database.
 
+## Roadmap
+
+- [ ] Add settings to change the QR-Code generator (e.g. link/placeholder).
+- [ ] Add various settings like OTP length, algorithm, etc.
+- [ ] Add protection to not allow same id twice.
+- [ ] Add screenshot to readme.
+
 ## License
 
 This plugin is released under the MIT License. See the `LICENSE` file for more details.
