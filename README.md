@@ -50,3 +50,14 @@ The secrets are stored in the YOURLS database.
 ## License
 
 This plugin is released under the MIT License. See the `LICENSE` file for more details.
+
+## Third-Party Licenses
+
+### SimpleAuthenticator.php
+
+The `src/SimpleAuthenticator.php` file is based on `SimpleThenticator` and is licensed under the BSD 2-Clause "Simplified" License.
+
+SimpleThenticator
+Copyright (c) 2025, https://poetter-sebastian.github.io
+Author: Sebastian Pötter, (@PHPGangsta, contributors) and contributors
+Licensed under the BSD 2-Clause "Simplified" License.
