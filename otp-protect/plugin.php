@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: OTP Protect
-Plugin URI: http://yourls.org/
+Plugin URI: https://github.com/Deafoult/yourls-otp-protect
 Description: Secure YOURLS instances so that only people with a valid OTP secret can create new short URLs.
-Version: 0.1
+Version: 0.2
 Author: deafoult
-Author URI: http://ozh.org/
+Author URI: https://github.com/Deafoult
 */
 
 require_once('src/SimpleAuthenticator.php');
