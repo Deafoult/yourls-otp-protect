@@ -4,11 +4,12 @@ Plugin Name: OTP Protect
 Plugin URI: https://github.com/Deafoult/yourls-otp-protect
 Description: Secure YOURLS instances so that only people with a valid OTP secret can create new short URLs.
 Version: 0.2
-Author: deafoult
+Author: Deafoult
 Author URI: https://github.com/Deafoult
 */
 
 require_once('src/SimpleAuthenticator.php');
+require_once('src/DataStore.php');
 use SebastianDevs\SimpleAuthenticator;
 
 // No direct call
@@ -28,12 +29,11 @@ function otpprotect_check_otp( $args ) {
 	// Retrieve and unserialize the OTP data from the database.
 	$otpprotect_DataSerialized = yourls_get_option("otpprotect_Data");
     $otpprotect_Data = DataStore::unserializeData($otpprotect_DataSerialized);
-	$otpprotect_Array = $otpprotect_Data->getAllObjects();
 
     $is_valid_otp = false;
     
 	// Iterate through all stored OTP secrets and check for a match.
-	foreach($otpprotect_Array as $item){
+	foreach($otpprotect_Data as $item){
 
         $auth = new SimpleAuthenticator();
         $url = $item->otp_url;
@@ -129,12 +129,9 @@ function otpprotect_settings_page() {
             		<p><input type="submit" value="Add ID" class="button" /></p>
             	</form>
 HTML;		
-
-	// Get all stored OTP objects.
-	$otpprotect_Array = $otpprotect_Data->getAllObjects();
     
 	// Loop through and display each stored OTP item.
-	foreach($otpprotect_Array as $item){
+	foreach($otpprotect_Data as $item){
         $url = urlencode($item->otp_url);
 	    echo <<<HTML
 			<hr />
@@ -153,85 +150,6 @@ HTML;
 	echo <<<HTML
 		</main>
 HTML;
-}
-
-
-/**
- * Manages a collection of objects in an array with serialization capabilities.
- */
-class DataStore {
-    private array $storage = [];
-
-    // --- CRUD Operations ---
-
-    /**
-     * Adds a new object to the store.
-     * The object contains an ID and an OTP URL.
-     *
-     * @param string $id The ID of the object.
-     * @param string $otpUrl The OTP URL for the object.
-     * @return object The added object.
-     */
-    public function addObject(string $id, string $otpUrl): object {
-        $newObject = (object) [
-            'id' => $id,
-            'otp_url' => $otpUrl
-        ];
-        $this->storage[] = $newObject;
-        return $newObject;
-    }
-
-    /**
-     * Deletes an object from the store by its ID.
-     *
-     * @param string $id The ID of the object to delete.
-     * @return bool True on success, false if the object was not found.
-     */
-    public function deleteObject(string $id): bool {
-        foreach ($this->storage as $key => $object) {
-            if ($object->id === $id) {
-                unset($this->storage[$key]);
-                $this->storage = array_values($this->storage); // Re-index the array.
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
-     * Returns all objects in the store.
-     *
-     * @return array An array of all stored objects.
-     */
-    public function getAllObjects(): array {
-        return $this->storage;
-    }
-
-    // --- Serialization ---
-
-    /**
-     * Serializes the current DataStore instance into a string.
-     *
-     * @return string The serialized string representing the object's state.
-     */
-    public function serializeData(): string {
-        return serialize($this);
-    }
-
-    /**
-     * Deserializes a string into a new DataStore instance.
-     *
-     * @param string $serializedString The serialized string.
-     * @return DataStore|null The reconstructed DataStore instance or null on failure.
-     */
-    public static function unserializeData(string $serializedString): ?DataStore {
-        $loadedObject = unserialize($serializedString);
-
-        if ($loadedObject instanceof DataStore) {
-            return $loadedObject;
-        }
-        return null;
-    }
 }
 
 ?>
