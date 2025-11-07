@@ -57,7 +57,7 @@ This plugin is released under the MIT License. See the `LICENSE` file for more d
 
 The `src/SimpleAuthenticator.php` file is based on `SimpleThenticator` and is licensed under the BSD 2-Clause "Simplified" License.
 
-SimpleThenticator
-Copyright (c) 2025, https://poetter-sebastian.github.io
-Author: Sebastian Pötter, (@PHPGangsta, contributors) and contributors
-Licensed under the BSD 2-Clause "Simplified" License.
+* Copyright (c) 2025, [https://poetter-sebastian.github.io](https://poetter-sebastian.github.io/)
+* Author: Sebastian Pötter, ([@PHPGangsta](https://github.com/PHPGangsta/GoogleAuthenticator), [contributors](https://github.com/PHPGangsta/GoogleAuthenticator/graphs/contributors)) and [contributors](https://github.com/poetter-sebastian/SimpleThenticator/graphs/contributors)
+* Licensed under the [BSD 2-Clause "Simplified" License](https://github.com/poetter-sebastian/SimpleThenticator/blob/main/LICENSE).
+
