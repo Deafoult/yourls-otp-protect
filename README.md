@@ -2,7 +2,7 @@
 
 # YOURLS OTP Protect
 
-A plugin for [YOURLS](https://yourls.org/ ) to protect link creation with a Time-based One-Time Password (TOTP).
+A plugin for [YOURLS](https://yourls.org/) to protect link creation with a Time-based One-Time Password (TOTP).
 
 ## Description
 
