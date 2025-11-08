@@ -2,7 +2,7 @@
 
 # YOURLS OTP Protect
 
-A plugin for [YOURLS](https://yourls.org/) to protect link creation with a Time-based One-Time Password (TOTP).
+A plugin for [YOURLS](https://yourls.org/ ) to protect link creation with a Time-based One-Time Password (TOTP).
 
 ## Description
 
@@ -66,8 +66,4 @@ This plugin is released under the MIT License. See the `LICENSE` file for more d
 ### SimpleAuthenticator.php
 
 The `src/SimpleAuthenticator.php` file is based on `SimpleThenticator` and is licensed under the BSD 2-Clause "Simplified" License.
-
-* Copyright (c) 2025, [https://poetter-sebastian.github.io](https://poetter-sebastian.github.io/)
-* Author: Sebastian Pötter, ([@PHPGangsta](https://github.com/PHPGangsta/GoogleAuthenticator), [contributors](https://github.com/PHPGangsta/GoogleAuthenticator/graphs/contributors)) and [contributors](https://github.com/poetter-sebastian/SimpleThenticator/graphs/contributors)
-* Licensed under the [BSD 2-Clause "Simplified" License](https://github.com/poetter-sebastian/SimpleThenticator/blob/main/LICENSE).
-
+See `third_party/SimpleAuthenticator/LICENSE` for license details.
