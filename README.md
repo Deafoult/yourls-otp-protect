@@ -49,10 +49,10 @@ The secrets are stored in the YOURLS database.
 
 ## Roadmap
 
-- [ ] Add settings to change the QR-Code generator (e.g. link/placeholder).
+- [ ] **[SECURITY]** Add settings to change the QR-Code generator (e.g. link/placeholder).
 - [ ] Add various settings like OTP length, algorithm, etc.
 - [ ] Add protection to not allow same id twice.
-- [ ] Add screenshot to readme.
+- [ ] Add Screenshot to Readme
 
 ## License
 
