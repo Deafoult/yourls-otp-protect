@@ -66,4 +66,4 @@ This plugin is released under the MIT License. See the `LICENSE` file for more d
 ### SimpleAuthenticator.php
 
 The `src/SimpleAuthenticator.php` file is based on `SimpleThenticator` and is licensed under the BSD 2-Clause "Simplified" License.
-See `third_party/SimpleAuthenticator/LICENSE` for license details.
+See `third_party/SimpleThenticator/LICENSE` for license details.
