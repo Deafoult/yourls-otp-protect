@@ -1,6 +1,8 @@
+[![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
+
 # YOURLS OTP Protect
 
-A plugin for YOURLS to protect link creation with a Time-based One-Time Password (TOTP).
+A plugin for [YOURLS](https://yourls.org/) to protect link creation with a Time-based One-Time Password (TOTP).
 
 ## Description
 
@@ -50,6 +52,7 @@ The secrets are stored in the YOURLS database.
 ## Roadmap
 
 - [ ] **[SECURITY]** Add settings to change the QR-Code generator (e.g. link/placeholder).
+- [ ] **[SECURITY]** Prevent token replay (single-use tokens)
 - [ ] Add various settings like OTP length, algorithm, etc.
 - [ ] Add protection to not allow same id twice.
 - [ ] Add Screenshot to Readme
