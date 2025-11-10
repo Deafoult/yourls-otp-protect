@@ -51,13 +51,17 @@ The secrets are stored in the YOURLS database.
 
 ## Roadmap
 
-- [ ] **[SECURITY]** Add settings to change the QR-Code generator (e.g. link/placeholder).
+- [X] **[SECURITY]** Add settings to change the QR-Code generator (e.g. link/placeholder).
 - [ ] **[SECURITY]** Prevent token replay (single-use tokens)
 - [ ] Add logging to capture incorrect token inputs and make the data available for Fail2ban.
 - [ ] Add Fail2Ban filter and jail example
-- [ ] Add various settings like OTP length, algorithm, etc.
+- [X] Add various settings like OTP length, algorithm, etc.
 - [ ] Add protection to not allow same id twice.
 - [ ] Add Screenshot to Readme
+
+## Changelog
+
+All notable changes to this project will be documented in the [CHANGELOG.md](CHANGELOG.md) file.
 
 ## License
 
